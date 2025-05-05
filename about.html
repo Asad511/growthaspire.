@@ -1,0 +1,135 @@
+<!-- about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Growth Aspire - About</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Inter', sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      scroll-behavior: smooth;
+    }
+    body {
+      flex: 1;
+    }
+    main {
+      flex: 1;
+    }
+    header {
+      background-color: #002c57;
+      color: white;
+      padding: 1rem 2rem;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1100px;
+      margin: auto;
+    }
+    nav h1 {
+      font-size: 1.8rem;
+      margin: 0;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+    }
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h2 {
+      color: #002c57;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .services, .about, .contact {
+      background-color: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .service-item {
+      background-color: #fdfdfd;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1rem;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+    }
+    .service-item h3 {
+      color: #002c57;
+      margin-top: 0;
+    }
+    .contact p, .about p, .service-item p {
+      line-height: 1.6;
+    }
+    footer {
+  text-align: left;
+  padding: 1.5rem;
+  background-color: rgba(0, 44, 87, 0.9);
+  color: white;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Growth Aspire</h1>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="service.html">Services</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="section about">
+      <h2>About Us</h2>
+      <p>At Growth Aspire Agency, we are passionate about helping businesses unlock their full potential through smart, data-driven digital strategies. Our team of dedicated marketers, designers, SEO experts, and lead generation specialists work together to deliver real, measurable growth for our clients. From search engine optimization (SEO) and email marketing to high-converting web design and performance-driven campaigns, we craft customized solutions that drive traffic, boost conversions, and build lasting customer relationships. Whether you're a startup or an established brand, our mission is to help you scale efficiently and sustainably. At Growth Aspire, your growth is our goal.</p>
+    </div>
+
+    <!-- Meet the Team Section -->
+    <div class="section team">
+      <h2>Meet the Team</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <h3>Touqeer – CEO</h3>
+          <p>Touqeer is the visionary behind Growth Aspire. With years of experience in digital strategy and business development, he has led numerous brands toward scalable, sustainable growth. His leadership combines technical expertise with a deep understanding of market dynamics to ensure every client reaches their potential.</p>
+        </div>
+        <div class="service-item">
+          <h3>Asad – CMO</h3>
+          <p>Asad heads the marketing strategy at Growth Aspire. As Chief Marketing Officer, he crafts powerful campaigns that connect brands with their audiences. His creativity, backed by strong data insights, drives impactful messaging and long-term brand loyalty.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Growth Aspire. All rights reserved.
+  </footer>
+</body>
+</html>
