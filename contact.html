@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Growth Aspire - Contact</title>
+  <meta name="description" content="Contact Growth Aspire for expert digital marketing, SEO, web development, and lead generation services.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
@@ -83,6 +84,9 @@
       gap: 1rem;
       margin-top: 2rem;
     }
+    label {
+      font-weight: 600;
+    }
     input, select, textarea, button {
       font-family: 'Inter', sans-serif;
       font-size: 1rem;
@@ -104,12 +108,25 @@
     button:hover {
       background-color: #014080;
     }
-
+    .form-message {
+      margin-top: 1rem;
+      font-weight: 600;
+      color: green;
+    }
     footer {
       text-align: left;
       padding: 1.5rem;
       background-color: rgba(0, 44, 87, 0.9);
       color: white;
+    }
+
+    @media (max-width: 768px) {
+      form {
+        padding: 1rem;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -139,11 +156,15 @@
       </div>
     </div>
 
-    <form id="contactForm" action="/submit-form" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      
-      <select name="category" required>
+    <form id="contactForm" action="https://formsubmit.co/touqeer@growthaspire.agency" method="POST">
+      <label for="name">Your Name</label>
+      <input id="name" type="text" name="name" placeholder="John Doe" required aria-label="Your Name" />
+
+      <label for="email">Your Email</label>
+      <input id="email" type="email" name="email" placeholder="john@example.com" required aria-label="Your Email" />
+
+      <label for="category">Service Category</label>
+      <select id="category" name="category" required>
         <option value="">Select a Service Category</option>
         <option value="Social Media Management">Social Media Management</option>
         <option value="Digital Marketing">Digital Marketing</option>
@@ -153,14 +174,35 @@
         <option value="Web Development">Web Development</option>
         <option value="Others">Others</option>
       </select>
-      
-      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+      <!-- Optional hidden input to avoid spam bots -->
+      <input type="hidden" name="_captcha" value="false">
+
       <button type="submit">Send Message</button>
+
+      <div class="form-message" id="formMessage" style="display:none;">
+        Thank you for your message. We’ll get back to you soon!
+      </div>
     </form>
+
+    <noscript>
+      <p style="color: red; font-weight: bold;">Please enable JavaScript for form feedback after submission.</p>
+    </noscript>
   </div>
 
   <footer>
     &copy; 2025 Growth Aspire. All rights reserved.
   </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function () {
+      setTimeout(() => {
+        document.getElementById("formMessage").style.display = "block";
+      }, 1000);
+    });
+  </script>
 </body>
 </html>
